@@ -193,9 +193,9 @@
     $pregunta7 = $_POST['pregunta7'];
     $pregunta8 = $_POST['pregunta8'];
     $pregunta9 = $_POST['pregunta9'];
-    $pregunta10 = $_POST['pregunta11'];
-   $pregunta11 = $_POST['pregunta12'];
-   $pregunta12 = $_POST['pregunta13'];
+    $pregunta10 = $_POST['pregunta10'];
+   $pregunta11 = $_POST['pregunta11'];
+   $pregunta12 = $_POST['pregunta12'];
    $pregunta13 = $_POST['pregunta13'];
    $puntuacio = 0;
     if ($pregunta1 == "d") {
@@ -244,8 +244,12 @@
 
 
     // afegiu més preguntes segons les necessitats
+$total_preguntas = 13;
+
+// Calcular la nota
+$nota = ($puntuacio /$total_preguntas) * 10;
     echo "Nom de l'estudiant: $nom_estudiant<br>";
-    echo "Puntuació: $puntuacio de x nombre de preguntes. (posar percentatge de nota sobre 13) <br>";
+    echo "Nota: " . number_format($nota, 2);
   }
   ?>
 </body>
