@@ -47,7 +47,7 @@
   </style>
 </head>
 <body>
-  <h1>Examen de protocolss</h1>
+  <h1>Examen de protocols</h1>
   <?php
   if (!isset($_POST['nom_estudiant'])) {
   ?>
