@@ -55,12 +55,7 @@
       <p>Introdueix el teu nom complet:</p>
       <input type="text" name="nom_estudiant">
 
-    <label for="programa">Selecciona un curs:</label>
-      <select name="programa" id="programa">
-      <option value="ASIX">ASIX</option>
-      <option value="DAM">DAM</option>
-      <option value="DAW">DAW</option>
-    </select>    
+    
 /* 1 */
 
       <p>Quin és el port típic de DHCP?</p>
@@ -184,27 +179,7 @@
       <input type="radio" name="pregunta13" value="d">d. 2049<br>
       <input type="submit" value="Envia">
 
-   <p>13. Quin port utilitza el TFTP?</p>
-      <input type="radio" name="pregunta13" value="a">a. 69<br>
-      <input type="radio" name="pregunta13" value="b">b. 22<br>
-      <input type="radio" name="pregunta13" value="c">c. 23 <br>
-      <input type="radio" name="pregunta13" value="d">d. 777<br>
-      <input type="submit" value="Envia">
-
- <p>13. Que es NTP?</p>
-      <input type="radio" name="pregunta13" value="a">a. Nice TP<br>
-      <input type="radio" name="pregunta13" value="b">b. Network time protocol<br>
-      <input type="radio" name="pregunta13" value="c">c. Next time post <br>
-      <input type="radio" name="pregunta13" value="d">d. No te preocupes<br>
-      <input type="submit" value="Envia">
-
- <p>13. Que son les CUPS?</p>
-      <input type="radio" name="pregunta13" value="a">a. sistema de impresión de código abierto y modular<br>
-      <input type="radio" name="pregunta13" value="b">b. Son capsules de nespresso<br>
-      <input type="radio" name="pregunta13" value="c">c. Corporation Unificated Post Self<br>
-      <input type="radio" name="pregunta13" value="d">d. Cap de les 3 respostes<br>
-      <input type="submit" value="Envia">
-  
+      
     </form>
   <?php
   } else {
@@ -222,9 +197,6 @@
    $pregunta11 = $_POST['pregunta11'];
    $pregunta12 = $_POST['pregunta12'];
    $pregunta13 = $_POST['pregunta13'];
-   $pregunta14 = $_POST['pregunta14'];
-   $pregunta15 = $_POST['pregunta15'];
-   $pregunta16 = $_POST['pregunta16'];
    $puntuacio = 0;
     if ($pregunta1 == "d") {
       $puntuacio++;
@@ -266,28 +238,18 @@
  if ($pregunta13 == "d") {
       $puntuacio++;
     }
-  if ($pregunta14 == "a") {
-      $puntuacio++;
-    }
- if ($pregunta15 == "b") {
-      $puntuacio++;
-    }
- if ($pregunta16 == "c") {
-      $puntuacio++;
-    }
+
 
 
 
 
     // afegiu més preguntes segons les necessitats
-$total_preguntas = 16;
+$total_preguntas = 13;
 
 // Calcular la nota
 $nota = ($puntuacio /$total_preguntas) * 10;
     echo "Nom de l'estudiant: $nom_estudiant<br>";
     echo "Nota: " . number_format($nota, 2);
-    echo "Encertades: " $puntuacio;
-    echo "Incorrectes: " $total_preguntas - $puntuacio;
   }
   ?>
 </body>
